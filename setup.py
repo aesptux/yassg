@@ -31,6 +31,7 @@ setup(
     package_dir={'yassg': 'yassg'},
     include_package_data=True,
     install_requires=[
+        'docopt'
     ],
     license="Apache 2.0",
     zip_safe=False,
