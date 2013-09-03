@@ -11,6 +11,7 @@ CONFIG = {
     'PATH': os.curdir,
     'PAGES_FOLDER': os.path.join('content', 'pages'),
     'SITE_NAME': 'yassg blog',
+    'SITE_SLOGAN': 'An awesome site',
     'SITE_URL': '',
     'SITE_THEME': '',
     'SITE_DESCRIPTION': 'A static site generated with yassg',
