@@ -28,6 +28,7 @@ def main(arguments):
     if arguments['startsite']:
         config = asker.asker()
         common.init_site_folder(config)
+        logger.info('Please review the config file for more information.')
     elif arguments['build']:
         pass  # build site
 
