@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang="{{ DEFAULT_LANG }}">
+<html lang="en">
 <head>
     {% block head %}
-    <title>{% block title %}{{ SITENAME }}{% endblock title %}</title>
+    <title>{% block title %}{{ SITE_NAME }}{% endblock title %}</title>
     <meta charset="utf-8" />
 </head>
 
 <body id="index" class="home">
 <header id="banner" class="body">
-    <h1><a href="{{ SITEURL }}">{{ SITENAME }} <strong>{{ SLOGAN }}</strong
+    <h1><a href="{{ SITEURL }}">{{ SITE_NAME }} <strong>{{ SITE_SLOGAN
+        }}</strong
             ></a></h1>
 </header><!-- /#banner -->
 {% endblock %}
@@ -16,7 +17,7 @@
 {% endblock %}
 <footer id="contentinfo" class="body">
     <address id="about" class="vcard body">
-        Powered by <a href="http://github.com/aesptux/yassg"> yassg </a>.
+        Powered by <a href="http://github.com/aesptux/yassg"><b>yassg</a>.</b>
     </address><!-- /#about -->
 </footer><!-- /#contentinfo -->
 </body>
