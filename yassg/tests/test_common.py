@@ -10,7 +10,6 @@ Tests for `yassg` module.
 
 import unittest
 import os
-import shutil
 from yassg.utils import common
 from yassg.core.settings import CONFIG
 
