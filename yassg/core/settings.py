@@ -15,5 +15,6 @@ CONFIG = {
     'SITE_URL': '',
     'SITE_THEME': '',
     'SITE_DESCRIPTION': 'A static site generated with yassg',
+    'THEME_ACTIVE': 'simple',
     'THEMES_FOLDER': 'themes'
 }
