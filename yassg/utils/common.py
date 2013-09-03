@@ -10,6 +10,10 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 
+def get_theme(themes_folder, active_theme):
+    pass
+
+
 def init_site_folder(config):
     logger.info('Creating structure')
     logger.info('Path is {0}'.format(config['PATH']))
