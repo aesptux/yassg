@@ -12,6 +12,7 @@ import unittest
 import os
 from yassg.utils import common
 from yassg.core.settings import CONFIG
+from yassg.core.exceptions import ThemeNotFound
 
 
 class TestYassg(unittest.TestCase):
@@ -41,6 +42,17 @@ class TestYassg(unittest.TestCase):
                                                    CONFIG['THEMES_FOLDER'])))
         self.assertTrue(os.path.isdir(os.path.join(CONFIG['PATH'],
                                                    CONFIG['OUTPUT_FOLDER'])))
+
+    def test_get_theme(self):
+        CONFIG['PATH'] = 'sample'
+        common.get_theme(CONFIG['PATH'], CONFIG['THEMES_FOLDER'],
+                         CONFIG['SITE_THEME'])
+
+        path_to_theme = os.path.join(CONFIG['PATH'],
+                                     CONFIG['THEMES_FOLDER'])
+        # self.assertTrue(os.path.isdir(path_to_theme))
+        # self.assertGreater(len(os.listdir(path_to_theme)) > 0, msg=None)
+        self.assertTrue(os.listdir(path_to_theme))
 
     def tearDown(self):
         pass

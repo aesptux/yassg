@@ -5,13 +5,30 @@ import json
 import os
 import logging
 from collections import OrderedDict
+import shutil
+import distutils.core
+from yassg.core.exceptions import ThemeNotFound
+
 
 logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO)
 
 
-def get_theme(themes_folder, active_theme):
-    pass
+def get_theme(path, themes_folder, active_theme):
+    logger.info('Setting theme')
+    # print os.path.dirname(os.path.join(os.path.abspath(__file__), os.pardir))
+    content_path = os.path.dirname(os.path.abspath(os.path.join(__file__,
+                                                         os.pardir)))
+    destination_path = os.path.abspath(os.path.join(path, themes_folder))
+    if active_theme not in os.listdir(os.path.join(content_path, 'themes')):
+        raise ThemeNotFound("Theme was not found on the folder, "
+                            "please check your settings.")
+    else:
+        # shutil.copytree(os.path.join(content_path, 'themes', active_theme),
+        #                 destination_path)
+        distutils.dir_util.copy_tree(os.path.join(content_path, 'themes',
+                                                  active_theme, 'assets'),
+                                     destination_path)
 
 
 def init_site_folder(config):

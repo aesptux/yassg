@@ -13,8 +13,7 @@ CONFIG = {
     'SITE_NAME': 'yassg blog',
     'SITE_SLOGAN': 'An awesome site',
     'SITE_URL': '',
-    'SITE_THEME': '',
+    'SITE_THEME': 'simple',
     'SITE_DESCRIPTION': 'A static site generated with yassg',
-    'THEME_ACTIVE': 'simple',
     'THEMES_FOLDER': 'themes'
 }
